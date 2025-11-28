@@ -13,6 +13,9 @@ import {NotFoundComponent} from './components/not-found/not-found';
 import {FormulaireSimpleComponent} from './components/formulaire-simple/formulaire-simple';
 import {CalculetteComponent} from './components/calculette/calculette';
 import {FormulaireReactifComponent} from './components/formulaire-reactif/formulaire-reactif';
+import {
+  FormulaireBuilderComponent,
+} from './components/formulaire-builder/formulaire-builder';
 
 export const routes: Routes = [
   {path: 'observable', component: ObservableComponent},
@@ -28,6 +31,7 @@ export const routes: Routes = [
   {path:'formulaire', component: FormulaireSimpleComponent},
   {path: 'calculette', component: CalculetteComponent},
   {path: 'reactive', component: FormulaireReactifComponent},
+  {path: 'builder', component: FormulaireBuilderComponent},
   //A PLACER EN DERNIER
   // {path: '**', component: NotFoundComponent},
   {path: 'not-found', component: NotFoundComponent},
