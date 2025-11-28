@@ -1,12 +1,18 @@
-import {Component, signal} from '@angular/core';
+import {Component} from '@angular/core';
+import Stagiaire from './classes/stagiaire';
+import {CommonModule} from '@angular/common';
 import {RouterOutlet} from '@angular/router';
+import {MenuComponent} from './components/menu/menu';
+import {HeaderComponent} from './components/header/header';
+
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root', // la balise à utiliser pour ce composant
+  imports: [CommonModule, RouterOutlet, MenuComponent, HeaderComponent], // CommonModule = pipes et directives de base
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class AppComponent {
-  title = 'angular-standalone';
-  paragraph = 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat';
+
+
 }
