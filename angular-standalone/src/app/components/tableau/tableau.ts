@@ -4,7 +4,7 @@ import {EventValuePipe} from '../../pipes/event-value-pipe';
 
 @Component({
   selector: 'app-tableau',
-  imports: [RouterLink, EventValuePipe],
+  imports: [],
   templateUrl: './tableau.html',
   styleUrl: './tableau.css',
 })

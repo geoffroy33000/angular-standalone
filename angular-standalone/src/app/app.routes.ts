@@ -11,6 +11,8 @@ import {CalculComponent} from './components/calcul/calcul';
 import {TableauComponent} from './components/tableau/tableau';
 import {NotFoundComponent} from './components/not-found/not-found';
 import {FormulaireSimpleComponent} from './components/formulaire-simple/formulaire-simple';
+import {CalculetteComponent} from './components/calculette/calculette';
+import {FormulaireReactifComponent} from './components/formulaire-reactif/formulaire-reactif';
 
 export const routes: Routes = [
   {path: 'observable', component: ObservableComponent},
@@ -24,6 +26,8 @@ export const routes: Routes = [
   {path: 'calcul/:op', component: CalculComponent},
   {path: 'tableau/:indice', component: TableauComponent},
   {path:'formulaire', component: FormulaireSimpleComponent},
+  {path: 'calculette', component: CalculetteComponent},
+  {path: 'reactive', component: FormulaireReactifComponent},
   //A PLACER EN DERNIER
   // {path: '**', component: NotFoundComponent},
   {path: 'not-found', component: NotFoundComponent},
