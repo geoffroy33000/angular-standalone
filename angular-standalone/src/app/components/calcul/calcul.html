@@ -1,0 +1,12 @@
+<!--<h2>Calcul</h2>
+<p>Résultat: {{resultat}}</p>-->
+
+@if(!erreur) {
+  <p>
+    {{ value1 }} {{ operateur }} {{ value2}} = {{ resultat}}
+  </p>
+} @else {
+  <p>
+    {{ erreur }}
+  </p>
+}

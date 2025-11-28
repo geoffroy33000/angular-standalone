@@ -8,6 +8,7 @@ import {AboutComponent} from './components/about/about';
 import {AdresseComponent} from './components/adresse/adresse';
 import {StagiairesComponent} from './components/stagiaires/stagiaires';
 import {CalculComponent} from './components/calcul/calcul';
+import {TableauComponent} from './components/tableau/tableau';
 
 export const routes: Routes = [
   {path: 'observable', component: ObservableComponent},
@@ -18,5 +19,5 @@ export const routes: Routes = [
   {path: 'adresse', component: AdresseComponent},
   {path: 'stagiaire/:nom/:prenom', component: StagiairesComponent},
   {path: 'calcul/:op', component: CalculComponent},
-
+  {path: 'tableau/:indice', component: TableauComponent},
 ];

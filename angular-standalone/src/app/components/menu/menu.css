@@ -1,0 +1,9 @@
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.active {
+  font-weight: bold;
+}
