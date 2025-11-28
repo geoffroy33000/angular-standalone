@@ -4,6 +4,7 @@
 <p>{{ numbers }}</p>
 <p>
   {{ numbers[indice] }}
-  <a [routerLink]="['/tableau', previous]">Précédent</a>
-  <a [routerLink]="['/tableau', next]">Suivant</a>
+  <button (click)="goToPrevious()">Previous</button>
+  <button (click)="goToNext()">Next</button>
+
 </p>

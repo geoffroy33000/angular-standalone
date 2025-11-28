@@ -178,3 +178,32 @@
     visiter toulouse
   </a>
 </p>
+
+<h2>Redirection depuis .ts</h2>
+<div>
+  <button (click)=" goToStagiaire()" class="btn btn-primary">
+    Aller au composant stagiaire
+  </button>
+</div>
+<div>
+  <button (click)=" goToAdresse()" class="btn btn-primary">
+    Aller au composant adresse
+  </button>
+</div>
+
+<h2>Les pipes (COMMON MODULE)</h2>
+<p>{{title | uppercase}}</p>
+<p>{{aujourdhui | date: 'd MMM y'}}</p>
+<p>{{aujourdhui | date: 'd MMM y' | uppercase}}</p>
+
+<h3>Pipe custom</h3>
+<p>{{title | getchar:2}}</p>
+
+<ul>
+  @for (elt of numbers | eventvalue; track $index) {
+    <li>
+      {{ elt }}
+    </li>
+  }
+</ul>
+

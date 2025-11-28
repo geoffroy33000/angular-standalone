@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import Stagiaire from '../../classes/stagiaire';
 import {CommonModule, JsonPipe, KeyValuePipe, NgForOf} from '@angular/common';
-import {RouterLink} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
+import {GetCharPipe} from '../../pipes/get-char-pipe';
+import {EventValuePipe} from '../../pipes/event-value-pipe';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +11,9 @@ import {RouterLink} from '@angular/router';
     JsonPipe,
     KeyValuePipe,
     CommonModule,
-    RouterLink
+    RouterLink,
+    GetCharPipe,
+    EventValuePipe
   ],
   templateUrl: './about.html',
   styleUrl: './about.css',
@@ -20,7 +24,7 @@ export class AboutComponent {
   title = 'angular-standalone';
   stagiaire = new Stagiaire(100, "Wick", "John")
   stagiaire2 = new Stagiaire(100, "Wick");
-  numbers = [1, 2, 3, 4, 5];
+  numbers = [1,2,3, 4, 5];
   // numbers = [];
 
   stagiaires: Array<Stagiaire> = [
@@ -46,6 +50,11 @@ export class AboutComponent {
 
   isDisabled = true;
 
+  aujourdhui = Date.now();
+
+  constructor(private router: Router) {
+  }
+
   //méthodes
   afficherBonjour(): string {
     return "Bonjour Angular Standalone!";
@@ -65,6 +74,23 @@ export class AboutComponent {
 
     //le contenu de l'élément html
     console.log((event.target as HTMLInputElement).value);
+  }
+
+  goToStagiaire(): void {
+    //this.router.navigateByUrl('/stagiaire/Pailhe/Geoffroy');
+    this.router.navigate(['/stagiaire',this.lastname, this.firstname]);
+  }
+
+  goToAdresse(): void {
+    this.router.navigate(
+      ['/adresse'],
+      {
+        queryParams: {
+          cp: this.codePostal,
+          ville: this.ville,
+        }
+      }
+    );
   }
 
 }
